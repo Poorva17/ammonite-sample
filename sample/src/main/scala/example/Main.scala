@@ -1,4 +1,4 @@
-package sample
+package example
 
 import ammonite.util.Res
 

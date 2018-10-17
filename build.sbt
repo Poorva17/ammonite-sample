@@ -1,9 +1,35 @@
-name := "ammonite-sample"
 
-version := "0.1.0-SNAPSHOT"
+inThisBuild(
+  List(
+    organization := "com.github.Poorva17.ammonite-sample",
+    scalaVersion := Libs.scalaVersion,
+    version := "0.1.0-SNAPSHOT",
+    resolvers += "jitpack" at "https://jitpack.io",
+    scalacOptions ++= Seq(
+      "-encoding",
+      "UTF-8",
+      "-feature",
+      "-unchecked",
+      "-deprecation",
+      //"-Xfatal-warnings",
+      "-Xlint",
+      "-Yno-adapted-args",
+      "-Ywarn-dead-code",
+      "-Xfuture",
+      //      "-Xprint:typer"
+    )
+  )
+)
 
-scalaVersion := "2.12.7"
+lazy val `ammonite-sample` = project
+  .in(file("."))
+  .aggregate(
+    `sample`
+  )
 
-organization := "com.github.Poorva17"
-
-libraryDependencies += Libs.`ammonite`
+lazy val `sample` = project
+  .settings(
+    libraryDependencies ++= Seq(
+      Libs.`ammonite`
+    )
+  )
