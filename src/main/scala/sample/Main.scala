@@ -1,3 +1,5 @@
+package sample
+
 import ammonite.util.Res
 
 object Main {
