@@ -14,7 +14,7 @@ sbt publishLocal
 ## Running the generated binary executable
 Run the executable from the root of the project
 ```
-./ammonite-sample
+./sample-bootstrap
 ```
 
 Note -
@@ -24,4 +24,9 @@ e.g. -
 ```
 ./coursier bootstrap -r jitpack --cfa com.github.Poorva17.ammonite-sample:sample_2.12:1d3854c -M example.Main -f -o sample-bootstrap
 ```
+Run the executable from the root of the project
+```
+./sample-bootstrap
+```
+
 It also works as expected when running `sbt run` from the root directory of the project.
