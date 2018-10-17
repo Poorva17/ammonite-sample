@@ -29,4 +29,4 @@ Run the executable from the root of the project
 ./sample-bootstrap
 ```
 
-It also works as expected when running `sbt run` from the root directory of the project.
+It also works as expected when running `sbt sample/run` from the root directory of the project.
